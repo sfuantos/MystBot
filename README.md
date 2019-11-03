@@ -9,17 +9,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 In order to be able Myst Bot on your local machine you need the following software
 
-```
 * [Node.js](https://nodejs.org/en/)
-* [ffmpeg] (https://ffmpeg.org/)
-```
+* [ffmpeg](https://ffmpeg.org/)
 
 ## Setup
 Follow this steps to setup Myst Bot
 
 ### Installing Ffmepg
 
-* Download the binaries from [ffmpeg] (https://ffmpeg.org/download.html)
+* Download the binaries from [ffmpeg](https://ffmpeg.org/download.html)
 * Extract it and copy the bin folder contents
 * Create a directory named ffmpeg_bins in C: drive.
 * Add it to path.
