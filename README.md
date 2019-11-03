@@ -38,7 +38,7 @@ Follow this steps to setup Myst Bot
 In order to be able to run a bot, you need a token that you get creating an app in the [developer portal](https://discordapp.com/developers/applications)
 
 ```
-    Go to [developer portal](https://discordapp.com/developers/applications)
+    Go to developer portal
     Create an new app
     Go to Bot section
     Add bot
