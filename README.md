@@ -33,6 +33,27 @@ Follow this steps to setup Myst Bot
         npm install ytdl-core
 ```
 
+### Get your token
+
+In order to be able to run a bot, you need a token that you get creating an app in the [developer portal](https://discordapp.com/developers/applications)
+
+```
+    Go to [developer portal](https://discordapp.com/developers/applications)
+    Create an new app
+    Go to Bot section
+    Add bot
+    Copy Token
+```
+Create a file named **config.json** in the root folder and add this to the file
+```
+    {
+        "prefix": "PREFIX",
+        "token": "TOKEN"
+    }
+```
+
+Replace **PREFIX** and **TOKEN**
+
 ## Running Myst bot
 You can install [nodemon](https://nodemon.io/) to be able to reload files automatically or just run with
 
