@@ -1,4 +1,5 @@
 const { CommandoClient } = require('discord.js-commando');
+const { Structures } = require('discord.js');
 const path = require('path');
 const logger = require('winston');
 const { prefix, token } = require('./config.json');
@@ -10,6 +11,27 @@ logger.add(new logger.transports.Console, {
 	colorize: true
 });
 logger.level = 'debug';
+
+Structures.extend('Guild', Guild => {
+	class MusicGuild extends Guild {
+	  constructor(client, data) {
+			super(client, data);
+			this.musicData = {
+		  queue: [],
+		  isPlaying: false,
+		  nowPlaying: null,
+				songDispatcher: null
+			};
+		/* this.triviaData = {
+		  isTriviaRunning: false,
+		  wasTriviaEndCalled: false,
+		  triviaQueue: [],
+		  triviaScore: new Map()
+			}; */
+		}
+	}
+	return MusicGuild;
+});
 
 const client = new CommandoClient({
 	commandPrefix: prefix,
@@ -29,6 +51,7 @@ client.registry
 	.registerGroups([
 		['test', 'Test Command Group'],
 		['music', 'Music'],
+		['other', 'Random types of commands'],
 	])
 	.registerDefaultGroups()
 	.registerDefaultCommands()
@@ -36,7 +59,12 @@ client.registry
 
 client.once('ready', () => {
 	console.log(`Logged in as ${client.user.tag}! (${client.user.id})`);
-	client.user.setActivity('with Commando');
+});
+
+client.on('guildMemberAdd', member => {
+	const channel = member.guild.channels.find(c => c.name === 'general');
+	if (!channel) return;
+	channel.send(`Welcome ${member}!`);
 });
 
 client.on('error', console.error);

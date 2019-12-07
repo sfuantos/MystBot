@@ -3,14 +3,29 @@
     "name": "myst-bot",
     "version": "1.0.0",
     "description": "Myst Discord Bot",
+    "readme": "README.md",
+    "maintainers": [
+        {
+            "name": "Sergio Fuantos",
+            "url": "https://github.com/sfuantos"
+        }
+    ],
     "author": "Sergio Fuantos",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sfuantos/MystBot.git"
+    },
+    "license": "",
     "dependencies": {
+        "cheerio": "^1.0.0-rc.3",
         "discord.io": "github:woor/discord.io#gateway_v6",
         "discord.js": "^11.5.1",
         "discord.js-commando": "^0.10.0",
         "ffmpeg": "0.0.4",
+        "node-fetch": "^2.6.0",
         "node-opus": "^0.3.3",
+        "simple-youtube-api": "^5.2.1",
         "winston": "^3.2.1",
-        "ytdl-core": "^1.0.0"
+        "ytdl-core": "^1.0.1"
     }
 }

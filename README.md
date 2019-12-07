@@ -1,6 +1,8 @@
 # Myst Bot
 A custom bot for Myst Discord Server
 
+# Features
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -26,11 +28,7 @@ Follow this steps to setup Myst Bot
 ```
     Clone
     Install dependencies running these commands on the terminal:
-        npm install discord.js
-        npm install discord.io github:woor/discord.io#gateway_v6 winston --save
-        npm install discord.js-commando
-        npm install node-opus
-        npm install ytdl-core
+        npm install
 ```
 
 ### Get your token
@@ -54,6 +52,8 @@ Create a file named **config.json** in the root folder and add this to the file
 
 Replace **PREFIX** and **TOKEN**
 
+### Invite Bot to your server
+
 ## Running Myst bot
 You can install [nodemon](https://nodemon.io/) to be able to reload files automatically or just run with
 
@@ -64,3 +64,6 @@ Install nodemon with the following command
 ```
 npm install -g nodemon
 ```
+
+# Buit With
+* [discord.js](https://github.com/discordjs/discord.js)
